@@ -16,7 +16,7 @@ const Login = () => {
                     />
                     <label htmlFor="login-pass">Password:</label>
                     <input type="password" id="login-pass" name="password"/>
-                    <input type="submit" className="btn submit" defaultValue="Login"/>
+                    <input type="submit" className="btn submit" value="Login"/>
                     <p className="field">
                         <span>
                             Or <Link to="/register">Register</Link>

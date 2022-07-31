@@ -17,7 +17,7 @@ const Register = () => {
                     <input type="password" name="password" id="register-pass"/>
                     <label htmlFor="confirm-pass">Confirm Password:</label>
                     <input type="password" name="confirm-password" id="confirm-pass"/>
-                    <input className="btn submit" type="submit" defaultValue="Register"/>
+                    <input className="btn submit" type="submit" value="Register"/>
                     <p className="field">
                         <span>
                             If you already have profile <Link to="/login">Login</Link>
