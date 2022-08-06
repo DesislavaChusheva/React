@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import PetDetails from '../../../PetDetails/PetDetails';
 
 const PetItem = ({pet}) => {
     return (

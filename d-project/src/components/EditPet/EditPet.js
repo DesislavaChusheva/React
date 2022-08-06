@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import * as petService from '../../services/PetService'
 
-const EditPet = ({ EditPetHandler }) => {
-    const[pet, setPet] = useState([]);
+const EditPet = () => {
+    const [pet, setPet] = useState([]);
 
     let petId = window.location.pathname.split("/").reverse()[0];
 
@@ -11,9 +11,25 @@ const EditPet = ({ EditPetHandler }) => {
         petService.getPetById(petId).then(pet => setPet(pet))
     }, [])
 
+    const onSubmit = (e) => {
+        e.preventDefault();
+        const formData = new FormData(e.target);
+        const petData = {
+            name: formData.get('name'),
+            breed: formData.get('breed'),
+            age: formData.get('age'),
+            weight: formData.get('weight'),
+            image: formData.get('image')
+        }
+        console.log(petData);
+        petService.editPet(petId, petData)
+    }
+
+
+
     return (
         <section id="add-page" className="auth-admin form">
-            <form id="add">
+            <form id="add" onSubmit={onSubmit}>
                 <label htmlform="name">Name:</label>
                 <input
                     type="text"
@@ -53,7 +69,6 @@ const EditPet = ({ EditPetHandler }) => {
                     className="btn submit"
                     type="submit"
                     value="Edit pet"
-                    onClick={EditPetHandler}
                 />
             </form>
         </section>

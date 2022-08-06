@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import * as petService from '../../services/PetService'
 import { AuthContext } from '../../contexts/AuthContext';
-import { AuthProvider } from '../../contexts/AuthContext';
 import { useContext } from 'react';
 
 const PetDetails = ({ }) => {
@@ -33,8 +32,8 @@ const PetDetails = ({ }) => {
 
             {userId == pet._ownerId
                 ? <div><Link to={`/edit-pet/${pet._id}`}>Edit</Link>
-                    <Link to="/pets">Delete</Link></div>
-                : <div><Link to={`/adoptions/${userId}`}>ADOPT</Link>
+                    <Link to={`/delete-pet/${pet._id}`}>Delete</Link></div>
+                : <div><Link to={`/adopt-pet/${pet._id}`}>ADOPT</Link>
                     <button className="btn">DONATE 5$</button></div>}
         </li>
     );

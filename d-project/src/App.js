@@ -12,15 +12,19 @@ import Login from './components/Login/Login';
 import Pets from "./components/Home/Pets/Pets";
 import AddPet from "./components/AddPet/AddPet";
 import EditPet from "./components/EditPet/EditPet";
+import DeletePet from "./components/DeletePet/DeletePet";
 import PetDetails from "./components/PetDetails/PetDetails";
+import AdoptPet from "./components/AdoptPet/AdoptPet"
 import EditUser from "./components/EditUser/EditUser";
 import Four0Three from "./components/Errors/403";
 import Logout from "./components/Logout/Logout";
+import AdoptionsUser from './components/AdoptionsUser/AdoptionsUser'
 
 
 import './App.css';
 
 const Register = lazy(() => import('./components/Register/Register'));
+
 
 function App() {
   return (
@@ -30,7 +34,7 @@ function App() {
         <main id="main-content">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/404" element={<Four0Three />} />
+            <Route path="/403" element={<Four0Three />} />
             <Route path="/login" element={<Login />} />
             <Route path="/logout" element={<Logout />} />
             <Route path="/register" element={
@@ -41,11 +45,14 @@ function App() {
             <Route path="/pets" element={<Pets />} />
             <Route path="/add-pet" element={<AddPet />} />
             <Route path="/edit-pet/:petId" element={<EditPet />} />
+            <Route path="/delete-pet/:petId" element={<DeletePet />} />
             <Route path="/pet-details/:petId" element={<PetDetails />} />
+            <Route path="/adopt-pet/:petId" element={<AdoptPet />} />
             {/* <Route path="/adoptions-pending" element={<X />} />
-          <Route path="/adoptions-admin" element={<X />} />
-          <Route path="/donations-admin" element={<X />} />
-          <Route path="/adoptions/:userId" element={<X />} />*/}
+            <Route path="/adoptions-admin" element={<X />} />
+            <Route path="/adoptions-denied" element={<X />} />
+            <Route path="/donations-admin" element={<X />} /> */}
+            <Route path="/adoptions/:userId" element={<AdoptionsUser />} />
           </Routes>
         </main>
       </div>

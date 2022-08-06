@@ -24,7 +24,7 @@ export const AuthProvider = ({
             isAuthenticated: !!auth.accessToken
         }}>
             {children}
-        </AuthContext.Provider>  
+        </AuthContext.Provider>
     );
 };
 
@@ -40,7 +40,7 @@ export const useAuthContext = () => {
 export const withAuth = (Component) => {
     const AuthWrapper = (props) => {
         const context = useContext(AuthContext);
-        
+
         return <Component {...props} auth={context} />
     }
 
