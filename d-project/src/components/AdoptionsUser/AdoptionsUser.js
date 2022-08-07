@@ -1,6 +1,4 @@
-import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import * as petService from '../../services/PetService'
 import * as adoptionService from '../../services/AdoptionService'
 import { AuthContext } from '../../contexts/AuthContext';
 import { useContext } from 'react';

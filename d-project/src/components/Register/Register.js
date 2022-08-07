@@ -1,5 +1,4 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { useContext } from 'react';
 
 import { withAuth } from "../../contexts/AuthContext";
 import * as authService from "../../services/AuthService"

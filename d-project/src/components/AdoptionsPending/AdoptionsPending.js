@@ -1,11 +1,7 @@
-import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import * as petService from '../../services/PetService'
-import { AuthContext } from '../../contexts/AuthContext';
 import AdoptionStatus from '../../enums/AdoptionStatus'
 import * as adoptionService from '../../services/AdoptionService'
 import AdoptionsPendingItem from './AdoptionsPendingItem/AdoptionsPendingItem'
-import { useContext } from 'react';
 
 const AdoptionsPendind = () => {
 

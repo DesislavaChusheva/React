@@ -1,18 +1,10 @@
-import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import ParseReact from 'parse/react-native';
 
 import * as userService from '../../services/UserService'
 
-//var Parse = require('parse').Parse;
-//var ParseReact = require('parse-react');
-
-
 const EditUser = ({EditUserHandler}) => {
     const[user, setUser] = useState([]);
-
-    // let userId = window.location.pathname.split("/").reverse()[0];
-    // console.log(userId);
 
     const currentUser = ParseReact.User.current();
     let userId = currentUser._id

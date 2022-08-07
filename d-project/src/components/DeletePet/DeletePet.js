@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import * as petService from '../../services/PetService'
 import { useNavigate } from 'react-router-dom';
