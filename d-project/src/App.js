@@ -19,7 +19,8 @@ import EditUser from "./components/EditUser/EditUser";
 import Four0Three from "./components/Errors/403";
 import Logout from "./components/Logout/Logout";
 import AdoptionsUser from './components/AdoptionsUser/AdoptionsUser'
-
+import AdoptionsAproved from './components/AdoptionsAproved/AdoptionsAproved'
+import AdoptionsDenied from './components/AdoptionsDenied/AdoptionsDenied'
 
 import './App.css';
 import AdoptionsPendind from "./components/AdoptionsPending/AdoptionsPending";
@@ -50,9 +51,9 @@ function App() {
             <Route path="/pet-details/:petId" element={<PetDetails />} />
             <Route path="/adopt-pet/:petId" element={<AdoptPet />} />
             <Route path="/adoptions-pending" element={<AdoptionsPendind />} />
-            {/* <Route path="/adoptions-admin" element={<X />} />
-            <Route path="/adoptions-denied" element={<X />} />
-            <Route path="/donations-admin" element={<X />} /> */}
+            <Route path="/adoptions-aproved" element={<AdoptionsAproved />} />
+            <Route path="/adoptions-denied" element={<AdoptionsDenied />} />
+            {/* <Route path="/donations-admin" element={<X />} /> */}
             <Route path="/adoptions/:userId" element={<AdoptionsUser />} />
           </Routes>
         </main>

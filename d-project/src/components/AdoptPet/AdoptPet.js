@@ -44,7 +44,8 @@ const AdoptPet = () => {
     const sendAdoptionRequest = () => {
         const adoptionRequestData = {
             petId: pet._id,
-            status: AdoptionStatus.Pending
+            status: AdoptionStatus.Pending,
+            fostererEmail: user.email
         }
         adoptionService.createAdoptionRequest(adoptionRequestData)
         navigate(`/adoptions/${userId}`)

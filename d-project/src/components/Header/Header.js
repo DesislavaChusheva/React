@@ -25,7 +25,7 @@ const Header = () => {
                         <Link to="/pets">Pets</Link>
                         <Link to="/add-Pet">Add pet</Link>
                         <Link to="/adoptions-pending">Pending adoptions</Link>
-                        <Link to="/adoptions-admin">Adoptions</Link>
+                        <Link to="/adoptions-aproved">Adoptions</Link>
                         <Link to="/adoptions-denied">Denied Adoptions</Link>
                         <Link to="/donations-admin">Donations</Link>
                         <Link to="/logout">Logout</Link>

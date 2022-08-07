@@ -4,10 +4,10 @@ import * as petService from '../../services/PetService'
 import { AuthContext } from '../../contexts/AuthContext';
 import AdoptionStatus from '../../enums/AdoptionStatus'
 import * as adoptionService from '../../services/AdoptionService'
-import AdoptionsPendingItem from './AdoptionsPendingItem/AdoptionsPendingItem'
+import AdoptionsDeniedItem from './AdoptionsDeniedItem/AdoptionsDeniedItem'
 import { useContext } from 'react';
 
-const AdoptionsPendind = () => {
+const AdoptionsDenied = () => {
 
     const [addoptionRequests, setAddoptionRequests] = useState([]);
 
@@ -15,12 +15,12 @@ const AdoptionsPendind = () => {
         adoptionService.getAllAdoptionRequests().then(addoptionRequests => setAddoptionRequests(addoptionRequests));
     }, [])
 
-    let pendingRequests = []
+    let rejectedAdoptions = []
 
 
     addoptionRequests.forEach(r => {
-        if (r.status === AdoptionStatus.Pending) {
-            pendingRequests.push(r)
+        if (r.status === AdoptionStatus.Denied) {
+            rejectedAdoptions.push(r)
         }
     });
 
@@ -28,11 +28,11 @@ const AdoptionsPendind = () => {
     return (
         <section id="pets-page">
             <h1>PENDING ADOPTIONS</h1>
-            {pendingRequests.length > 0
-                ? pendingRequests.map(p => <AdoptionsPendingItem key={p._id} adoptionRequest={p} />)
+            {rejectedAdoptions.length > 0
+                ? rejectedAdoptions.map(p => <AdoptionsDeniedItem key={p._id} adoptionRequest={p} />)
                 : <h2 className="no-pets">There are no pending adoptions!</h2>}
         </section>
     );
 }
 
-export default AdoptionsPendind
+export default AdoptionsDenied
