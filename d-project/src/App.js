@@ -22,6 +22,7 @@ import AdoptionsUser from './components/AdoptionsUser/AdoptionsUser'
 
 
 import './App.css';
+import AdoptionsPendind from "./components/AdoptionsPending/AdoptionsPending";
 
 const Register = lazy(() => import('./components/Register/Register'));
 
@@ -48,8 +49,8 @@ function App() {
             <Route path="/delete-pet/:petId" element={<DeletePet />} />
             <Route path="/pet-details/:petId" element={<PetDetails />} />
             <Route path="/adopt-pet/:petId" element={<AdoptPet />} />
-            {/* <Route path="/adoptions-pending" element={<X />} />
-            <Route path="/adoptions-admin" element={<X />} />
+            <Route path="/adoptions-pending" element={<AdoptionsPendind />} />
+            {/* <Route path="/adoptions-admin" element={<X />} />
             <Route path="/adoptions-denied" element={<X />} />
             <Route path="/donations-admin" element={<X />} /> */}
             <Route path="/adoptions/:userId" element={<AdoptionsUser />} />
