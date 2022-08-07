@@ -8,6 +8,7 @@ import AdoptionStatus from '../../../enums/AdoptionStatus'
 const AdoptionUserItem = ({adoptionRequest}) => {
 
     const[pet, setPet] = useState([]);
+    console.log(adoptionRequest.petIds);
 
     useEffect(() => {
         petService.getPetById(adoptionRequest.petId).then(pet => setPet(pet))
