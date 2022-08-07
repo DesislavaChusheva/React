@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import * as petService from '../../services/PetService'
+import * as donationService from '../../services/DonationsService'
 import { AuthContext } from '../../contexts/AuthContext';
 import { useContext } from 'react';
 
@@ -20,6 +21,16 @@ const PetDetails = ({ }) => {
 
     console.log(pet);
 
+    const donate = () => {
+        let doantion = {
+            petId: pet._id,
+            petName: pet.name,
+            donor: user.email
+        }
+        donationService.createDonation(doantion)
+        alert(`Thank you for donating 5$ for ${pet.name}!`)
+    }
+
     return (
         <li>
             <div className="image-wrap">
@@ -34,7 +45,7 @@ const PetDetails = ({ }) => {
                 ? <div><Link to={`/edit-pet/${pet._id}`}>Edit</Link>
                     <Link to={`/delete-pet/${pet._id}`}>Delete</Link></div>
                 : <div><Link to={`/adopt-pet/${pet._id}`}>ADOPT</Link>
-                    <button className="btn">DONATE 5$</button></div>}
+                    <button className="btn" onClick={donate}>DONATE 5$</button></div>}
         </li>
     );
 };

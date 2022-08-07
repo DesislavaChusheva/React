@@ -21,6 +21,8 @@ import Logout from "./components/Logout/Logout";
 import AdoptionsUser from './components/AdoptionsUser/AdoptionsUser'
 import AdoptionsAproved from './components/AdoptionsAproved/AdoptionsAproved'
 import AdoptionsDenied from './components/AdoptionsDenied/AdoptionsDenied'
+import DonationsUser from './components/DonationsUser/DonationsUser'
+import DonationsAdmin from "./components/DonationsAdmin/DonationsAdmin";
 
 import './App.css';
 import AdoptionsPendind from "./components/AdoptionsPending/AdoptionsPending";
@@ -53,8 +55,9 @@ function App() {
             <Route path="/adoptions-pending" element={<AdoptionsPendind />} />
             <Route path="/adoptions-aproved" element={<AdoptionsAproved />} />
             <Route path="/adoptions-denied" element={<AdoptionsDenied />} />
-            {/* <Route path="/donations-admin" element={<X />} /> */}
+            <Route path="/donations-admin" element={<DonationsAdmin />} />
             <Route path="/adoptions/:userId" element={<AdoptionsUser />} />
+            <Route path="/donations/:userId" element={<DonationsUser />} />
           </Routes>
         </main>
       </div>

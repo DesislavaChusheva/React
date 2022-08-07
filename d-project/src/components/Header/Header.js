@@ -35,7 +35,7 @@ const Header = () => {
                     ? <div id="user">
                         <Link to="/pets">Pets</Link>
                         <Link to="/adoptions/:userId">Adoptions</Link>
-                        <Link to="/edit-profile/:userId">Edit profile</Link>
+                        <Link to="/donations/:userId">Donations</Link>
                         <Link to="/logout">Logout</Link>
                     </div>
                     : []}
