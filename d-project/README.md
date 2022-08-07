@@ -1,70 +1,9 @@
-# Getting Started with Create React App
+PET#help is a platform where people who care about animals have the opportunity to financially support an animal or directly adopt it.
+When a person enters the site, they do not have the opportunity to view the catalog of pets in need until they register or login into their profile.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Users have access to the catalog and can view each pet individually in more detail. For each pet, the user can donate $5 or declare a desire to adopt it. While donations can be repeatedly, for each pet, a user can declare their desire to adopt it only once. While the status of an adoption request is "pending", the pet is still visible in the catalog and other users can submit donations and adoption requests for it. If an adoption request is rejected, the user who submitted it is not allowed to submit a request for the same pet again. If the request is approved, the pet acquires the status of "adopted" and is removed from the catalog. If there are requests for the same pet from other users, they are automatically denied. User can see all their requests along with their status. The user can see all the donations made by him.
 
-## Available Scripts
+The admin is the only one who has permission to add pets to the catalog. He can also edit and remove pets from the catalog. When a user makes a request for adoption, it is visible to the admin in the "pending" section. The admin decides whether to approve or reject a request, and in both cases the requests are stored in the "adoptions" or "rejected adoptions" section, respectively. When an application is approved, all other adoption applications for the same pet are automatically rejected. All donations with information about "donor" and "pet" are visible to the admin.
 
-In the project directory, you can run:
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+***Upcoming stylization until 13.08.2022***
