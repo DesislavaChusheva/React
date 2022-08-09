@@ -23,7 +23,7 @@ const Home = () => {
 
 
     return (
-        <section>
+        <section id="home">
             <h4><b>HELP</b> a pet!</h4>
             <h3><b>SAVE</b> a pet!</h3>
             <h1><b>LOVE</b> a pet!</h1>

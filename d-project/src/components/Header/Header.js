@@ -6,40 +6,43 @@ const Header = () => {
     const { user } = useAuthContext();
     return (
         <header>
-            <h1>
-                <Link className="home" to="/">
-                    PET#help
-                </Link>
-            </h1>
-            <nav>
+            <div id="header-div">
+                <h1>
+                    <Link style={{ textDecoration: 'none', color: 'white'  }} className="home" to="/">
+                        PET#help
+                    </Link>
+                </h1>
+                <nav>
 
-                {!user.email
-                    ? <div id="guest">
-                        <Link to="/register">Register</Link>
-                        <Link to="/login">Login</Link>
-                    </div>
-                    : []}
+                    {!user.email
+                        ? <ul id="guest">
+                            <li><Link style={{ textDecoration: 'none', color: 'white' }} to="/register">Register</Link></li>
+                            <li><Link style={{ textDecoration: 'none', color: 'white'  }} to="/login">Login</Link></li>
+                        </ul>
+                        : []}
 
-                {user.email == "petsAdmin@abv.bg"
-                    ? <div id="admin">
-                        <Link to="/pets">Pets</Link>
-                        <Link to="/add-Pet">Add pet</Link>
-                        <Link to="/adoptions-pending">Pending adoptions</Link>
-                        <Link to="/adoptions-aproved">Adoptions</Link>
-                        <Link to="/adoptions-denied">Denied Adoptions</Link>
-                        <Link to="/donations-admin">Donations</Link>
-                        <Link to="/logout">Logout</Link>
-                    </div>
-                    : []}
-                {user.email && user.email != "petsAdmin@abv.bg"
-                    ? <div id="user">
-                        <Link to="/pets">Pets</Link>
-                        <Link to="/adoptions/:userId">Adoptions</Link>
-                        <Link to="/donations/:userId">Donations</Link>
-                        <Link to="/logout">Logout</Link>
-                    </div>
-                    : []}
-            </nav>
+                    {user.email == "petsAdmin@abv.bg"
+                        ? <ul id="admin">
+                            <li><Link style={{ textDecoration: 'none', color: 'white'  }} to="/pets">Pets</Link></li>
+                            <li><Link style={{ textDecoration: 'none', color: 'white'  }} to="/add-Pet">Add pet</Link></li>
+                            <li><Link style={{ textDecoration: 'none', color: 'white'  }} to="/adoptions-pending">Pending adoptions</Link></li>
+                            <li><Link style={{ textDecoration: 'none', color: 'white'  }} to="/adoptions-aproved">Adoptions</Link></li>
+                            <li><Link style={{ textDecoration: 'none', color: 'white'  }} to="/adoptions-denied">Denied Adoptions</Link></li>
+                            <li><Link style={{ textDecoration: 'none', color: 'white'  }} to="/donations-admin">Donations</Link></li>
+                            <li><Link style={{ textDecoration: 'none', color: 'white'  }} to="/logout">Logout</Link></li>
+                        </ul>
+                        : []}
+                    {user.email && user.email != "petsAdmin@abv.bg"
+                        ? <ul id="user">
+                            <li><Link style={{ textDecoration: 'none', color: 'white'  }} to="/pets">Pets</Link></li>
+                            <li><Link style={{ textDecoration: 'none', color: 'white'  }} to="/adoptions/:userId">Adoptions</Link></li>
+                            <li><Link style={{ textDecoration: 'none', color: 'white'  }} to="/donations/:userId">Donations</Link></li>
+                            <li><Link style={{ textDecoration: 'none', color: 'white'  }} to="/logout">Logout</Link></li>
+                        </ul>
+                        : []}
+                </nav>
+            </div>
+            <img src="header-img.png"></img>
         </header>
     );
 };

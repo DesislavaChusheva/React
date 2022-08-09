@@ -6,6 +6,7 @@ import { AuthContext } from "./contexts/AuthContext";
 import { AuthProvider } from './contexts/AuthContext';
 
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer'
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 //import Register from './components/Register/Register';
@@ -24,6 +25,7 @@ import AdoptionsDenied from './components/AdoptionsDenied/AdoptionsDenied'
 import DonationsUser from './components/DonationsUser/DonationsUser'
 import DonationsAdmin from "./components/DonationsAdmin/DonationsAdmin";
 
+import './styles/Common.css'
 import './App.css';
 import AdoptionsPendind from "./components/AdoptionsPending/AdoptionsPending";
 
@@ -60,6 +62,7 @@ function App() {
             <Route path="/donations/:userId" element={<DonationsUser />} />
           </Routes>
         </main>
+        <Footer />
       </div>
     </AuthProvider>
   );
