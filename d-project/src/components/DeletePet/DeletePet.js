@@ -25,10 +25,10 @@ const DeletePet = () => {
     }
 
     return (
-        <section>
+        <section id="delete-pet">
             <h2>Do you want to delete {pet.name}`s profile?</h2>
-            <button onClick={deletePet}>DELETE</button>
-            <button onClick={cancel}>CANCEL</button>
+            <button className="btn" onClick={deletePet}>DELETE</button>
+            <button className="btn" onClick={cancel}>CANCEL</button>
         </section>
     )
 }

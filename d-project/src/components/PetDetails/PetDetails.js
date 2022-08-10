@@ -32,21 +32,21 @@ const PetDetails = ({ }) => {
     }
 
     return (
-        <li>
-            <div className="image-wrap">
-                <img src={pet.image} />
+        <div id="pet-details">
+            <div className="image-wrap pet-details-img">
+                <img id="pet-details-img" src={pet.image} />
             </div>
             <h3>{pet.name}</h3>
-            <p>{pet.breed}</p>
-            <p>{pet.age}</p>
-            <p>{pet.weight}</p>
+            <p><strong>BREED:</strong> {pet.breed}</p>
+            <p><strong>AGE:</strong> {pet.age}</p>
+            <p><strong>WEIGHT:</strong> {pet.weight}</p>
 
             {userId == pet._ownerId
-                ? <div><Link to={`/edit-pet/${pet._id}`}>Edit</Link>
-                    <Link to={`/delete-pet/${pet._id}`}>Delete</Link></div>
-                : <div><Link to={`/adopt-pet/${pet._id}`}>ADOPT</Link>
+                ? <div><Link className="btn" style={{ textDecoration: 'none', color: "white" }} to={`/edit-pet/${pet._id}`}>Edit</Link>
+                    <Link className="btn" style={{ textDecoration: 'none', color: "white" }} to={`/delete-pet/${pet._id}`}>Delete</Link></div>
+                : <div ><Link className="btn" style={{ textDecoration: 'none', color: "white" }} to={`/adopt-pet/${pet._id}`}>ADOPT</Link>
                     <button className="btn" onClick={donate}>DONATE 5$</button></div>}
-        </li>
+        </div>
     );
 };
 

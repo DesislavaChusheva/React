@@ -70,17 +70,17 @@ const AdoptPet = () => {
 
 
     return (
-        <section>
+        <div id="adopt-pet">
             <h2>SEND ADOPTION REQUEST</h2>
-            <img src={pet.image} />
+            <img id="adopt-pet-img" src={pet.image} />
             {previousRequestExists
                 ? <div>
                     <h3>You`ve already requested adoption for {pet.name}!</h3>
                     <p>See your <Link to={`/adoptions/${userId}`}>Adoption requests</Link></p>
                 </div>
-                : <button onClick={sendAdoptionRequest}>Adopt <strong>{pet.name}</strong></button>}
-            <button onClick={deleteAll}>DELETE ALL</button>
-        </section>
+                : <button className="btn" onClick={sendAdoptionRequest}>Adopt <strong>{pet.name}</strong></button>}
+            {/* <button onClick={deleteAll}>DELETE ALL</button> */}
+        </div>
     )
 }
 

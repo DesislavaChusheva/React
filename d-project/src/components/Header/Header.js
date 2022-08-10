@@ -25,7 +25,7 @@ const Header = () => {
                         ? <ul id="admin">
                             <li><Link style={{ textDecoration: 'none', color: 'white'  }} to="/pets">Pets</Link></li>
                             <li><Link style={{ textDecoration: 'none', color: 'white'  }} to="/add-Pet">Add pet</Link></li>
-                            <li><Link style={{ textDecoration: 'none', color: 'white'  }} to="/adoptions-pending">Pending adoptions</Link></li>
+                            <li><Link style={{ textDecoration: 'none', color: 'white'  }} to="/adoptions-pending">Pending Adoptions</Link></li>
                             <li><Link style={{ textDecoration: 'none', color: 'white'  }} to="/adoptions-aproved">Adoptions</Link></li>
                             <li><Link style={{ textDecoration: 'none', color: 'white'  }} to="/adoptions-denied">Denied Adoptions</Link></li>
                             <li><Link style={{ textDecoration: 'none', color: 'white'  }} to="/donations-admin">Donations</Link></li>
@@ -42,7 +42,7 @@ const Header = () => {
                         : []}
                 </nav>
             </div>
-            <img src="header-img.png"></img>
+            <img src="header-img-edit.png"></img>
         </header>
     );
 };

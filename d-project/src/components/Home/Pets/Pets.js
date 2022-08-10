@@ -8,13 +8,13 @@ import AdoptionStatus from '../../../enums/AdoptionStatus'
 
 const Pets = () => {
 
-    const[pets, setPets] = useState([]);
+    const [pets, setPets] = useState([]);
 
     useEffect(() => {
         petService.getAllPets().then(pets => setPets(pets));
     }, [])
 
-    const[addoptionRequests, setAddoptionRequests] = useState([]);
+    const [addoptionRequests, setAddoptionRequests] = useState([]);
 
     useEffect(() => {
         adoptionService.getAllAdoptionRequests().then(addoptionRequests => setAddoptionRequests(addoptionRequests));
@@ -33,14 +33,16 @@ const Pets = () => {
             notAdoptedPets.push(p)
         }
     });
-    
+
     return (
-        <section id="pets-page">
+        <div id="pets-page">
             <h1>PETs to LOVE</h1>
-            {notAdoptedPets.length > 0
-                ? notAdoptedPets.map(p => <PetItem key={p._id} pet={p}/>)
-                : <h2 className="no-pets">All pets are saved!</h2>}
-        </section>
+            <ul>
+                {notAdoptedPets.length > 0
+                    ? notAdoptedPets.map(p => <PetItem key={p._id} pet={p} />)
+                    : <h2 className="no-pets">All pets are saved!</h2>}
+            </ul>
+        </div>
     );
 };
 

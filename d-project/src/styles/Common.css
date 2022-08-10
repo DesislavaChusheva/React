@@ -3,14 +3,16 @@
 
 :root {
     --main-app-color: rgb(4, 14, 7);
-  }
+    --main-app-color-tr: rgba(4, 14, 7, 0.479);
+    --main-app-color-tr-gr: rgba(30, 94, 49, 0.479);
+}
 
 div#header-div {
     box-sizing: border-box;
 
     background-image: linear-gradient(var(--main-app-color), transparent);
     width: 100%;
-    height: 200px;
+    height: 300px;
     padding: 20px 80px;
 
     font-family: Poppins, sans-serif;
@@ -61,7 +63,8 @@ nav ul li Link {
 
 footer {
     position: fixed;
-    bottom: 5px;
+    bottom: 0;
+
 
     padding: 3px 0px;
     background-color: var(--main-app-color);
@@ -89,10 +92,185 @@ footer ul li {
 
 main {
     text-align: center;
+    margin-bottom: 150px;
 }
 
 section#home {
     font-size: 50px;
     color: var(--main-app-color);
-    margin-top: 200px;
+    margin-top: 100px;
+}
+
+form {
+    text-align: left;
+    background-color: white;
+    margin-top: 0px;
+    display: inline-block;
+    box-shadow: 0px 0px 50px 15px var(--main-app-color);
+    border-radius: 25px;
+    padding: 10px 55px 10px 50px;
+}
+
+section#section-form {
+    background-color: white;
+    display: inline-block;
+    padding: 10px 55px 60px 65px;
+
+    border: 1px solid red;
+}
+
+form div h1,
+form div p {
+    text-align: center;
+}
+
+
+
+input {
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.btn,
+.submit {
+    display: inline-block;
+    border: none;
+    background-color: var(--main-app-color-tr);
+    padding: 10px 30px;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: white;
+    margin: 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#pets-page h1,
+#addoptions-user-page h1 {
+    position: absolute;
+    left: 50%;
+    top: 65px;
+    transform: translate(-50%);
+    color: white;
+    font-size: 60px;
+
+    padding: 20px 50px;
+    background-color: var(--main-app-color-tr);
+    border-radius: 500px;
+
+}
+
+
+#pets-page ul {
+    margin: 0px 100px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+#pet-card {
+    width: 300px;
+    height: 450px;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--main-app-color-tr-gr);
+    color: white;
+
+    position: relative;
+}
+
+#pet-card h3,
+#pet-details h3 {
+    font-size: 30px;
+    margin: 0;
+    padding-top: 10px;
+}
+
+img.pet-card {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+
+    margin-top: 20px;
+
+}
+
+div.for-link {
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%);
+    width: 80px;
+    padding: 5px 20px;
+    background-color: var(--main-app-color-tr);
+    border-radius: 50px;
+}
+
+
+#pet-details {
+    position: absolute;
+    left: 50%;
+    bottom: 150px;
+    transform: translate(-50%);
+    width: 500px;
+    height: 650px;
+    margin-top: 0px;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--main-app-color-tr-gr);
+    color: white;
+    font-size: 18px;
+}
+
+
+
+.image-wrap img#pet-details-img {
+    margin-top: 20px;
+    width: 450px;
+    height: 350px;
+    border-radius: 10px;
+
+
+    object-fit: cover;
+}
+
+#delete-pet {
+    margin-top: 150px;
+}
+
+
+#adopt-pet {
+    position: absolute;
+    left: 50%;
+    bottom: 200px;
+    transform: translate(-50%);
+    width: 500px;
+    height: 500px;
+    margin-top: 0px;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--main-app-color-tr-gr);
+    color: white;
+    font-size: 18px;
+}
+
+img#adopt-pet-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+
+
+    object-fit: cover;
 }
