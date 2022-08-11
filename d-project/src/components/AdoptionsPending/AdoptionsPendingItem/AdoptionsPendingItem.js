@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import * as petService from '../../../services/PetService'
 import AdoptionStatus from '../../../enums/AdoptionStatus'
 import * as adoptionService from '../../../services/AdoptionService'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, } from 'react-router-dom';
 
 const AdoptionsPendingItem = ({ adoptionRequest }) => {
     const navigate = useNavigate();
@@ -20,7 +20,6 @@ const AdoptionsPendingItem = ({ adoptionRequest }) => {
     useEffect(() => {
         adoptionService.getAllAdoptionRequests().then(requests => setRequests(requests))
     }, [])
-
 
 
     const Aprove = () => {
@@ -43,7 +42,6 @@ const AdoptionsPendingItem = ({ adoptionRequest }) => {
             }
         })
         alert(`Adoption for ${pet.name} aproved!`)
-        window.location.reload();
 
 
     }
@@ -56,7 +54,7 @@ const AdoptionsPendingItem = ({ adoptionRequest }) => {
         }
         adoptionService.editAdoptionRequest(adoptionRequest._id, statusDenied)
         alert(`Adoption for ${pet.name} denied!`)
-        window.location.reload();
+
 
     }
 

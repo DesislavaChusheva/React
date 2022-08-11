@@ -272,6 +272,8 @@ img#adopt-pet-img {
     width: 300px;
     height: 300px;
     border-radius: 10px;
+    display: block;
+    margin: auto;
 
 
     object-fit: cover;
@@ -346,9 +348,7 @@ button.reject {
     color: red;
 }
 
-.donations {
-
-}
+.donations {}
 
 .donations-div {
     display: block;
@@ -362,4 +362,10 @@ button.reject {
 .donations-li {
     font-size: 24px;
     color: white;
+}
+
+
+#four-o-three {
+    margin-top: 100px;
+    font-size: 30px;
 }

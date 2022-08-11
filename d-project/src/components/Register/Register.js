@@ -18,8 +18,12 @@ const Register = ({ auth }) => {
 
         if (!email || !password || !confirmPassword) {
             alert('All fields are required!')
+            return
         }
-        if (password !== confirmPassword) return;
+        if (password !== confirmPassword) {
+            alert('"Password" and "Confirm Password" don`t match!')
+            return
+        }
 
         authService.register(email, password)
             .then(authData => {

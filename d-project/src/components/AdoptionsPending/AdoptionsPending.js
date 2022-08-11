@@ -3,13 +3,13 @@ import AdoptionStatus from '../../enums/AdoptionStatus'
 import * as adoptionService from '../../services/AdoptionService'
 import AdoptionsPendingItem from './AdoptionsPendingItem/AdoptionsPendingItem'
 
-const AdoptionsPendind = () => {
+const AdoptionsPending = () => {
 
     const [addoptionRequests, setAddoptionRequests] = useState([]);
 
     useEffect(() => {
         adoptionService.getAllAdoptionRequests().then(addoptionRequests => setAddoptionRequests(addoptionRequests));
-    }, [])
+    })
 
     let pendingRequests = []
 
@@ -33,4 +33,4 @@ const AdoptionsPendind = () => {
     );
 }
 
-export default AdoptionsPendind
+export default AdoptionsPending
