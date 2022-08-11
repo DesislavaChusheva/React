@@ -42,8 +42,8 @@ const PetDetails = ({ }) => {
             <p><strong>WEIGHT:</strong> {pet.weight}</p>
 
             {userId == pet._ownerId
-                ? <div><Link className="btn" style={{ textDecoration: 'none', color: "white" }} to={`/edit-pet/${pet._id}`}>Edit</Link>
-                    <Link className="btn" style={{ textDecoration: 'none', color: "white" }} to={`/delete-pet/${pet._id}`}>Delete</Link></div>
+                ? <div><Link className="btn" style={{ textDecoration: 'none', color: "white" }} to={`/edit-pet/${pet._id}`}>EDIT</Link>
+                    <Link className="btn" style={{ textDecoration: 'none', color: "white" }} to={`/delete-pet/${pet._id}`}>DELETE</Link></div>
                 : <div ><Link className="btn" style={{ textDecoration: 'none', color: "white" }} to={`/adopt-pet/${pet._id}`}>ADOPT</Link>
                     <button className="btn" onClick={donate}>DONATE 5$</button></div>}
         </div>

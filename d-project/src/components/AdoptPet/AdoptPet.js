@@ -78,7 +78,7 @@ const AdoptPet = () => {
                     <h3>You`ve already requested adoption for {pet.name}!</h3>
                     <p>See your <Link to={`/adoptions/${userId}`}>Adoption requests</Link></p>
                 </div>
-                : <button className="btn" onClick={sendAdoptionRequest}>Adopt <strong>{pet.name}</strong></button>}
+                : <button className="btn" onClick={sendAdoptionRequest}>ADOPT <strong>{pet.name}</strong></button>}
             {/* <button onClick={deleteAll}>DELETE ALL</button> */}
         </div>
     )

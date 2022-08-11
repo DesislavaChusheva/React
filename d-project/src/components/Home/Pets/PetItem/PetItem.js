@@ -10,7 +10,7 @@ const PetItem = ({ pet }) => {
                 <h3>{pet.name}</h3>
                 <p>{pet.breed}</p>
                 <div className="for-link">
-                    <Link style={{ textDecoration: 'none', color: "white" }} to={`/pet-details/${pet._id}`}>Details</Link>
+                    <Link style={{ textDecoration: 'none', color: "white" }} to={`/pet-details/${pet._id}`}>DETAILS</Link>
                 </div>
             </div>
         </li>

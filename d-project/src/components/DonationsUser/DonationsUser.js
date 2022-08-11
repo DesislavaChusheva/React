@@ -27,9 +27,11 @@ const DonationsUser = () => {
     return (
         <section id="pets-page">
             <h1>DONATIONS</h1>
-            {userDonations.length > 0
-                ? userDonations.map(d => <DonationsUserItem key={d._id} donation={d} />)
-                : <h2 className="no-donations">There are no donations from you!</h2>}
+            <ul className="donations-ul">
+                {userDonations.length > 0
+                    ? userDonations.map(d => <DonationsUserItem key={d._id} donation={d} />)
+                    : <h2 className="no-donations">There are no donations from you!</h2>}
+            </ul>
         </section>
     );
 }

@@ -1,10 +1,12 @@
 
-const DonationsUserItem = ({donation}) => {
+const DonationsUserItem = ({ donation }) => {
 
     return (
-        <li>
-            <p>Donated 5 $ for {donation.petName}</p>
-        </li>
+        <div className="donations-div">
+            <li className="donations-li">
+                <p>You donated 5$ for {donation.petName}</p>
+            </li>
+        </div>
     );
 };
 

@@ -81,7 +81,7 @@ const EditPet = () => {
                     <input
                         className="btn submit"
                         type="submit"
-                        value="Edit pet"
+                        value="EDIT PET"
                     />
                 </div>
             </form>

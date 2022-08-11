@@ -71,7 +71,7 @@ const AddPet = ({}) => {
                     <input
                         className="btn submit"
                         type="submit"
-                        value="Add pet"
+                        value="ADD PET"
                     />
                 </div>
             </form>

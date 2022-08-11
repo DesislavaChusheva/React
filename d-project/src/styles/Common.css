@@ -345,3 +345,21 @@ button.reject {
 .Denied {
     color: red;
 }
+
+.donations {
+
+}
+
+.donations-div {
+    display: block;
+    border-radius: 500px;
+    width: 100%;
+    padding: 0px 20px;
+    background-color: var(--main-app-color-tr-gr);
+    margin: -15px;
+}
+
+.donations-li {
+    font-size: 24px;
+    color: white;
+}
