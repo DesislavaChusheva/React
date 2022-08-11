@@ -4,9 +4,9 @@ import AdoptionStatus from '../../../enums/AdoptionStatus'
 
 
 
-const AdoptionUserItem = ({adoptionRequest}) => {
+const AdoptionUserItem = ({ adoptionRequest }) => {
 
-    const[pet, setPet] = useState([]);
+    const [pet, setPet] = useState([]);
     console.log(adoptionRequest.petIds);
 
     useEffect(() => {
@@ -18,14 +18,16 @@ const AdoptionUserItem = ({adoptionRequest}) => {
 
     return (
         <li>
-            <div className="image-wrap">
-                <img src={pet.image} />
+            <div id="adoptions-user">
+                <div className="image-wrap">
+                    <img id="adoptions-user-img" src={pet.image} />
+                </div>
+                <h3>{pet.name}</h3>
+                <p>{pet.breed}</p>
+                <p>{pet.age}</p>
+                <p>{pet.weight}</p>
+                <div id="adoption-status" className={AdoptionStatus[adoptionRequest.status]}><p><strong>{AdoptionStatus[adoptionRequest.status]}</strong></p></div>
             </div>
-            <h3>{pet.name}</h3>
-            <p>{pet.breed}</p>
-            <p>{pet.age}</p>
-            <p>{pet.weight}</p>
-            <p>{AdoptionStatus[adoptionRequest.status]}</p>
         </li>
     );
 };

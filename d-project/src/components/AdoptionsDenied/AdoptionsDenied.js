@@ -24,9 +24,11 @@ const AdoptionsDenied = () => {
     return (
         <section id="pets-page">
             <h1>DENIED ADOPTIONS</h1>
-            {rejectedAdoptions.length > 0
-                ? rejectedAdoptions.map(p => <AdoptionsDeniedItem key={p._id} adoptionRequest={p} />)
-                : <h2 className="no-pets">There are no pending adoptions!</h2>}
+            <ul id="adoptions-denied-ul">
+                {rejectedAdoptions.length > 0
+                    ? rejectedAdoptions.map(p => <AdoptionsDeniedItem key={p._id} adoptionRequest={p} />)
+                    : <h2 className="no-pets">There are no pending adoptions!</h2>}
+            </ul>
         </section>
     );
 }

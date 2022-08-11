@@ -62,13 +62,16 @@ const AdoptionsPendingItem = ({ adoptionRequest }) => {
 
     return (
         <li>
-            <div className="image-wrap">
-                <img src={pet.image} />
+            <div id="adoptions-pending">
+                <div className="image-wrap">
+                    <img id="adoptions-pending-img" src={pet.image} />
+                </div>
+                <p><strong>{adoptionRequest.fostererEmail}</strong></p>
+                <p>wants to adopt</p>
+                <p><strong>{pet.name}</strong></p>
+                <button className="btn p-a aprove" id="aprove-btn" onClick={Aprove}>AROVE</button>
+                <button className="btn p-a reject" id="reject-btn" onClick={Reject}>REJECT</button>
             </div>
-            <h3>{pet.name}</h3>
-            <p>{adoptionRequest.fostererEmail}</p>
-            <button id="aprove-btn" onClick={Aprove}>AROVE</button>
-            <button id="reject-btn" onClick={Reject}>REJECT</button>
         </li>
     );
 };

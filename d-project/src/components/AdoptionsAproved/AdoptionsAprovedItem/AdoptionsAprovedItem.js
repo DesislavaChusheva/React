@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import * as petService from '../../../services/PetService'
 
-const AdoptionsAprovedItem = ({adoptionRequest}) => {
+const AdoptionsAprovedItem = ({ adoptionRequest }) => {
 
-    const[pet, setPet] = useState([])
+    const [pet, setPet] = useState([])
 
     useEffect(() => {
         petService.getPetById(adoptionRequest.petId).then(pet => setPet(pet))
@@ -11,12 +11,14 @@ const AdoptionsAprovedItem = ({adoptionRequest}) => {
 
     return (
         <li>
-            <div className="image-wrap">
-                <img src={pet.image} />
+            <div id="adoptions-aproved">
+                <div className="image-wrap">
+                    <img id="adoptions-aproved-img" src={pet.image} />
+                </div>
+                <h3>{pet.name}</h3>
+                <p>was adopted by</p>
+                <p><strong>{adoptionRequest.fostererEmail}</strong></p>
             </div>
-            <h3>{pet.name}</h3>
-            <p>was adopted by</p>
-            <p>{adoptionRequest.fostererEmail}</p>
         </li>
     );
 };

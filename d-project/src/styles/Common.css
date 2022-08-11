@@ -104,7 +104,7 @@ section#home {
 form {
     text-align: left;
     background-color: white;
-    margin-top: 0px;
+    margin-top: -100px;
     display: inline-block;
     box-shadow: 0px 0px 50px 15px var(--main-app-color);
     border-radius: 25px;
@@ -146,7 +146,9 @@ input {
     font-size: 16px;
     letter-spacing: 2px;
     color: white;
-    margin: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
 }
 
 ul {
@@ -273,4 +275,73 @@ img#adopt-pet-img {
 
 
     object-fit: cover;
+}
+
+
+ul#pending-adoptions-ul,
+ul#adoptions-aproved-ul,
+ul#adoptions-denied-ul,
+ul#adoptions-user-ul {
+    display: flex;
+    gap: 50px;
+}
+
+#adoptions-pending,
+#adoptions-aproved,
+#adoptions-denied,
+#adoptions-user {
+    width: 230px;
+    height: 350px;
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--main-app-color-tr-gr);
+    color: white;
+    line-height: 12px;
+}
+
+#adoptions-denied {
+    background-color: rgba(255, 0, 0, 0.603);
+}
+
+#adoptions-user {
+    height: 400px;
+}
+
+img#adoptions-pending-img,
+img#adoptions-aproved-img,
+img#adoptions-denied-img,
+img#adoptions-user-img {
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+    border-radius: 20px;
+
+
+    object-fit: cover;
+}
+
+button.p-a {
+    margin: 0px 5px;
+    padding: 5px 15px;
+}
+
+button.reject {
+    background-color: rgba(255, 0, 0, 0.616);
+}
+
+#adoption-status {
+    font-size: 24px;
+}
+
+.Pending {
+    color: gray;
+}
+
+.Adopted {
+    color: green
+}
+
+.Denied {
+    color: red;
 }

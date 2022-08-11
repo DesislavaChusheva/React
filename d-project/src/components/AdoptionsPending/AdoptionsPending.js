@@ -24,9 +24,11 @@ const AdoptionsPendind = () => {
     return (
         <section id="pets-page">
             <h1>PENDING ADOPTIONS</h1>
-            {pendingRequests.length > 0
-                ? pendingRequests.map(p => <AdoptionsPendingItem key={p._id} adoptionRequest={p} />)
-                : <h2 className="no-pets">There are no pending adoptions!</h2>}
+            <ul id="pending-adoptions-ul">
+                {pendingRequests.length > 0
+                    ? pendingRequests.map(p => <AdoptionsPendingItem key={p._id} adoptionRequest={p} />)
+                    : <h2 className="no-pets">There are no pending adoptions!</h2>}
+            </ul>
         </section>
     );
 }
